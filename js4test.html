@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script>
+function checkvalue() { 
+    
+    var valid = false;
+     var mystring = document.getElementById('myString').value; 
+    var peeps = ["Tim", "Mario", "Jen", "Deb"];
+    
+    alert("length of peeps is ===>"+peeps.length+"<====");
+
+    
+    for (let x=0; x<peeps.length; x++) {
+    
+        if (peeps[x]==mystring) {
+            valid = true;
+            break;
+            }
+    }
+    
+    if (valid==false) {
+        alert ("names do not match");
+    } else {
+        alert("you got it right");
+    }
+    
+}
+</script>
+<style>
+li {
+	list-style-type: none;
+	font-size: 16pt;
+}
+
+.mail {
+	margin: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 400px;
+	background: #D8F1F8;
+	border: 1px soild silver;
+}
+
+.mail h2 {
+	margin-left: 38px;
+}
+
+input {
+	font-size: 20pt;
+}
+
+input:focus, textarea:focus {
+	background-color: lightyellow;
+}
+
+input submit {
+	font-size: 12pt;
+}
+
+.rq {
+	color: #FF0000;
+	font-size: 10pt;
+}
+</style>
+<body>
+	<div class="mail">
+		<h2>Input your Name and Submit</h2>
+		<form onsubmit="checkvalue(this)">
+			<input name="myString" type="text" value='' id="myString"> <input
+				type="submit" value="check value" />
+		</form>
+	</div>
+</body>
+</html>
+
+<!--
+alert("I am here");
+    var mystring = document.getElementById('myString').value; 
+    alert ("==>"+mystring+"<==");
+    if(!mystring.match(/\S/)) {
+        alert ('Empty value is not allowed');
+        return false;
+    } else {
+        alert("correct input");
+        return true;
+    }
+
+-->
